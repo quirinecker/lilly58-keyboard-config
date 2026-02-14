@@ -27,7 +27,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
         };
 
         hmr: hmr {
@@ -41,7 +41,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
         };
     };
 
