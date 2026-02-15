@@ -50,32 +50,32 @@
 
         combo_super_left {
             bindings = <&kp LEFT_GUI>;
-            key-positions = <52 28>;
+            key-positions = <28 53>;
         };
 
         combo_super_right {
             bindings = <&kp LEFT_GUI>;
-            key-positions = <31 55>;
+            key-positions = <31 54>;
         };
 
         combo_ctrl_left {
-            bindings = <&none>;
-            key-positions = <52 27>;
+            bindings = <&kp RIGHT_CONTROL>;
+            key-positions = <27 53>;
         };
 
         combo_alt_left {
-            bindings = <&none>;
-            key-positions = <52 26>;
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <26 53>;
         };
 
         combo_ctrl_right {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <55 32>;
+            bindings = <&kp RIGHT_CONTROL>;
+            key-positions = <32 54>;
         };
 
         combo_alt_right {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <55 33>;
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <33 54>;
         };
     };
 
