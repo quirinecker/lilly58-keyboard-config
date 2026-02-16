@@ -117,6 +117,22 @@
         };
     };
 
+    macros {
+        macro_left_gui_l0: macro_gui_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &mo 0>;
+            label = "MACRO_GUI_L0";
+        };
+
+        macro_right_gui_l0: macro_right_gui_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_GUI &mo 0>;
+            label = "MACRO_RIGHT_GUI_L0";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -134,7 +150,7 @@
 &kp TAB     &kp Q   &kp W   &kp E     &kp R             &kp T                                 &kp Y   &kp U              &kp I          &kp O    &kp P     &kp EQUAL
 &kp ESCAPE  &kp A   &kp S   &kp D     &kp F             &kp G                                 &kp H   &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z   &kp X   &kp C     &kp V             &kp B   &kp LBKT        &kp RBKT      &kp N   &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LALT  &kp LEFT_CONTROL  &mo 1   &tml 3 SPACE    &tmr 4 ENTER  &mo 1   &kp RIGHT_CONTROL  &kp RIGHT_ALT
+                            &kp LALT  &kp LEFT_CONTROL  &mo 3   &tml 3 SPACE    &tmr 4 ENTER  &mo 4   &kp RIGHT_CONTROL  &kp RIGHT_ALT
             >;
         };
 
@@ -180,21 +196,21 @@
 
         mod_left {
             bindings = <
-&kp GRAVE  &kp N1     &kp N2    &kp N3     &kp N4    &kp N5                        &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E      &kp R     &kp T                         &kp Y   &kp U   &kp I      &kp O    &kp P     &kp EQUAL
-&kp ESC    &kp LSHFT  &kp LALT  &kp LCTRL  &kp LGUI  &kp G                         &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z      &kp X     &kp C      &kp V     &kp B   &kp LBKT    &kp RBKT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &trans     &trans    &trans  &trans      &trans    &trans  &trans  &trans
+&kp GRAVE  &kp N1     &kp N2    &kp N3     &kp N4              &kp N5                        &kp N6  &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E      &kp R               &kp T                         &kp Y   &kp N8  &kp I      &kp O    &kp P          &kp EQUAL
+&kp ESC    &kp LSHFT  &kp LALT  &kp LCTRL  &macro_left_gui_l0  &kp G                         &kp H   &kp J   &kp K      &kp L    &kp BACKSPACE  &kp APOS
+&kp LSHFT  &kp Z      &kp X     &kp C      &kp V               &kp B   &kp LBKT    &kp RBKT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
+                                &trans     &trans              &trans  &trans      &trans    &trans  &trans  &trans
             >;
         };
 
         mod_right {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                        &kp N6  &kp N7         &kp N8             &kp N9         &kp N0           &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T                         &kp Y   &kp U          &kp I              &kp O          &kp P            &kp EQUAL
-&kp ESC    &kp A   &kp S   &kp D   &kp F   &kp G                         &kp H   &kp RIGHT_GUI  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &kp APOS
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B   &kp LBKT    &kp RBKT  &kp N   &kp M          &kp COMMA          &kp DOT        &kp FSLH         &kp RSHFT
-                           &trans  &trans  &trans  &trans      &trans    &trans  &trans         &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                        &kp N6  &kp N7               &kp N8             &kp N9         &kp N0           &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp A                         &kp Y   &kp U                &kp I              &kp O          &kp P            &kp EQUAL
+&kp ESC    &kp A   &kp S   &kp D   &kp F   &kp G                         &kp H   &macro_right_gui_l0  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &kp APOS
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B   &kp LBKT    &kp RBKT  &kp N   &kp M                &kp COMMA          &kp DOT        &kp FSLH         &kp RSHFT
+                           &trans  &trans  &trans  &trans      &trans    &trans  &trans               &trans
             >;
         };
     };
