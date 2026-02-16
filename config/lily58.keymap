@@ -122,7 +122,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_GUI &to 0 &macro_press>,
+                <&kp LGUI &to 0 &macro_press>,
                 <&kp LGUI &to 3 &macro_release>;
 
             label = "MACRO_GUI_L0";
@@ -132,7 +132,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp RIGHT_GUI &to 0 &macro_press>,
+                <&kp RGUI &to 0 &macro_press>,
                 <&kp RGUI &to 4 &macro_release>;
 
             label = "MACRO_RIGHT_GUI_L0";
