@@ -121,14 +121,16 @@
         macro_left_gui_l0: macro_gui_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &mo 0>;
+            bindings = <&kp LEFT_GUI &mo 0>, <&macro_press>;
+
             label = "MACRO_GUI_L0";
         };
 
         macro_right_gui_l0: macro_right_gui_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_GUI &mo 0>;
+            bindings = <&kp RIGHT_GUI &mo 0>, <&macro_press>;
+
             label = "MACRO_RIGHT_GUI_L0";
         };
     };
