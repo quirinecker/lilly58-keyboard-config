@@ -121,16 +121,16 @@
         macro_left_gui_l0: macro_gui_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LGUI &mo 0 &macro_press>;
+            bindings = <&kp LGUI &mo 0>, <&macro_press>;
+
             label = "MACRO_GUI_L0";
         };
 
         macro_right_gui_l0: macro_right_gui_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp RGUI &mo 0 &macro_press>;
+            bindings = <&kp RGUI &mo 0>, <&macro_press>;
+
             label = "MACRO_RIGHT_GUI_L0";
         };
     };
@@ -148,11 +148,11 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE   &kp N1  &kp N2  &kp N3    &kp N4            &kp N5                                &kp N6  &kp N7             &kp N8         &kp N9   &kp N0    &kp MINUS
-&kp TAB     &kp Q   &kp W   &kp E     &kp R             &kp T                                 &kp Y   &kp U              &kp I          &kp O    &kp P     &kp EQUAL
-&kp ESCAPE  &kp A   &kp S   &kp D     &kp F             &kp G                                 &kp H   &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z   &kp X   &kp C     &kp V             &kp B   &kp LBKT        &kp RBKT      &kp N   &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LALT  &kp LEFT_CONTROL  &mo 3   &tml 3 SPACE    &tmr 4 ENTER  &mo 4   &kp RIGHT_CONTROL  &kp RIGHT_ALT
+&kp GRAVE   &kp N1  &kp N2  &kp N3    &kp N4            &kp N5                          &kp N6  &kp N7             &kp N8         &kp N9   &kp N0    &kp MINUS
+&kp TAB     &kp Q   &kp W   &kp E     &kp R             &kp T                           &kp Y   &kp U              &kp I          &kp O    &kp P     &kp EQUAL
+&kp ESCAPE  &kp A   &kp S   &kp D     &kp F             &kp G                           &kp H   &kp J              &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z   &kp X   &kp C     &kp V             &kp B   &kp LBKT     &kp RBKT   &kp N   &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                            &kp LALT  &kp LEFT_CONTROL  &mo 3   &kp ENTER    &kp SPACE  &mo 4   &kp RIGHT_CONTROL  &kp RIGHT_ALT
             >;
         };
 
@@ -166,11 +166,11 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2            &bt BT_SEL 3          &bt BT_SEL 4                     &trans        &trans                   &trans                 &trans                &trans         &trans
-&kp F1      &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3            &kp NUMBER_4          &kp NUMBER_5                     &kp NUMBER_6  &kp NUMBER_7             &kp NUMBER_8           &kp NUMBER_9          &kp NUMBER_0   &kp F12
-&kp GRAVE   &kp EXCL      &hml LEFT_ALT AT  &hml LEFT_CONTROL HASH  &hml LEFT_GUI DOLLAR  &kp PRCNT                        &kp LEFT      &hmr LC(RIGHT_GUI) DOWN  &hmr RIGHT_CONTROL UP  &hmr RIGHT_ALT RIGHT  &kp BACKSPACE  &kp DELETE
-&trans      &trans        &trans            &trans                  &trans                &trans        &trans    &trans   &trans        &kp MINUS                &kp KP_PLUS            &kp LBRC              &kp RBRC       &kp PIPE
-                                            &trans                  &trans                &trans        &trans    &kp RET  &trans        &trans                   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2            &bt BT_SEL 3          &bt BT_SEL 4                     &trans        &trans        &trans        &trans        &trans         &trans
+&kp F1      &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3            &kp NUMBER_4          &kp NUMBER_5                     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp F12
+&kp GRAVE   &kp EXCL      &hml LEFT_ALT AT  &hml LEFT_CONTROL HASH  &hml LEFT_GUI DOLLAR  &kp PRCNT                        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp BACKSPACE  &kp DELETE
+&trans      &trans        &trans            &trans                  &trans                &trans        &trans    &trans   &trans        &kp MINUS     &kp KP_PLUS   &kp LBRC      &kp RBRC       &kp PIPE
+                                            &trans                  &trans                &trans        &trans    &kp RET  &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -198,21 +198,21 @@
 
         mod_left {
             bindings = <
-&kp GRAVE  &kp N1     &kp N2    &kp N3     &kp N4              &kp N5                        &kp N6  &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E      &kp R               &kp T                         &kp Y   &kp N8  &kp I      &kp O    &kp P          &kp EQUAL
-&kp ESC    &kp LSHFT  &kp LALT  &kp LCTRL  &macro_left_gui_l0  &kp G                         &kp H   &kp J   &kp K      &kp L    &kp BACKSPACE  &kp APOS
-&kp LSHFT  &kp Z      &kp X     &kp C      &kp V               &kp B   &kp LBKT    &kp RBKT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
-                                &trans     &trans              &trans  &trans      &trans    &trans  &trans  &trans
+&kp GRAVE  &kp N1     &kp N2    &kp N3     &kp N4        &kp N5                        &kp N6  &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E      &kp R         &kp T                         &kp Y   &kp N8  &kp I      &kp O    &kp P          &kp EQUAL
+&kp ESC    &kp LSHFT  &kp LALT  &kp LCTRL  &kp LEFT_GUI  &kp G                         &kp H   &kp J   &kp K      &kp L    &kp BACKSPACE  &kp APOS
+&kp LSHFT  &kp Z      &kp X     &kp C      &mo 1         &kp B   &kp LBKT    &kp RBKT  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
+                                &trans     &trans        &trans  &trans      &trans    &trans  &trans  &trans
             >;
         };
 
         mod_right {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                        &kp N6  &kp N7               &kp N8             &kp N9         &kp N0           &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp A                         &kp Y   &kp U                &kp I              &kp O          &kp P            &kp EQUAL
-&kp ESC    &kp A   &kp S   &kp D   &kp F   &kp G                         &kp H   &macro_right_gui_l0  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &kp APOS
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B   &kp LBKT    &kp RBKT  &kp N   &kp M                &kp COMMA          &kp DOT        &kp FSLH         &kp RSHFT
-                           &trans  &trans  &trans  &trans      &trans    &trans  &trans               &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                        &kp N6  &kp N7         &kp N8             &kp N9         &kp N0           &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp A                         &kp Y   &kp U          &kp I              &kp O          &kp P            &kp EQUAL
+&kp ESC    &kp A   &kp S   &kp D   &kp F   &kp G                         &kp H   &kp RIGHT_GUI  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &kp APOS
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B   &kp LBKT    &kp RBKT  &kp N   &mo 1          &kp COMMA          &kp DOT        &kp FSLH         &kp RSHFT
+                           &trans  &trans  &trans  &trans      &trans    &trans  &trans         &trans
             >;
         };
     };
