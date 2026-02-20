@@ -158,20 +158,20 @@
 
         mod_left {
             bindings = <
-&tans  &tans     &tans    &tans     &tans        &tans                        &tans  &tans  &tans     &tans   &tans         &tans
-&tans    &tans      &tans     &tans      &tans         &tans                         &tans   &tans  &tans      &tans    &tans          &tans
-&tans    &kp LSHFT  &kp LALT  &kp LCTRL  &kp LEFT_GUI  &tans                         &tans   &tans   &tans      &tans    &kp BACKSPACE  &tans
-&tans  &tans      &tans     &tans      &mo 3         &tans   &tans    &tans  &tans   &tans   &tans  &tans  &tans       &tans
+&trans  &trans     &trans    &trans     &trans        &trans                        &trans  &trans  &trans     &trans   &trans         &trans
+&trans    &trans      &trans     &trans      &trans         &trans                         &trans   &trans  &trans      &trans    &trans          &trans
+&trans    &kp LSHFT  &kp LALT  &kp LCTRL  &kp LEFT_GUI  &trans                         &trans   &trans   &trans      &trans    &kp BACKSPACE  &trans
+&trans  &trans      &trans     &trans      &mo 3         &trans   &trans    &trans  &trans   &trans   &trans  &trans  &trans       &trans
                                 &trans     &trans        &trans  &trans      &trans    &trans  &trans  &trans
             >;
         };
 
         mod_right {
             bindings = <
-&tans  &tans  &tans  &tans  &tans  &tans                        &tans  &tans         &tans             &tans         &tans           &tans
-&tans    &tans   &tans   &tans   &tans   &tans                         &tans   &tans          &tans              &tans          &tans            &tans
-&tans    &tans   &tans   &tans   &tans   &tans                         &tans   &kp RIGHT_GUI  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &tans
-&tans  &tans   &tans   &tans   &tans   &tans   &tans    &tans  &tans   &mo 3          &tans          &tans        &tans         &tans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans         &trans             &trans         &trans           &trans
+&trans    &trans   &trans   &trans   &trans   &trans                         &trans   &trans          &trans              &trans          &trans            &trans
+&trans    &trans   &trans   &trans   &trans   &trans                         &trans   &kp RIGHT_GUI  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &trans
+&trans  &trans   &trans   &trans   &trans   &trans   &trans    &trans  &trans   &mo 3          &trans          &trans        &trans         &trans
                            &trans  &trans  &trans  &trans      &trans    &trans  &trans         &trans
             >;
         };
