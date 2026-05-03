@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include "keys_de.h"
+
 
 &mt {
     tapping-term-ms = <280>;
@@ -186,7 +188,7 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2            &bt BT_SEL 3          &bt BT_SEL 4                     &trans        &trans        &trans        &trans        &trans         &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2            &bt BT_SEL 3          &bt BT_SEL 4                     &trans        &trans        &trans        &trans        &trans         &kp DE_A_UMLAUT
 &kp F1      &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3            &kp NUMBER_4          &kp NUMBER_5                     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp F12
 &kp GRAVE   &kp EXCL      &hml LEFT_ALT AT  &hml LEFT_CONTROL HASH  &hml LEFT_GUI DOLLAR  &kp PRCNT                        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp BACKSPACE  &kp DELETE
 &trans      &trans        &trans            &trans                  &trans                &trans        &trans    &trans   &trans        &kp MINUS     &kp KP_PLUS   &kp LBRC      &kp BACKSLASH  &kp PIPE
