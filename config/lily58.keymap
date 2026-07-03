@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include "keys_de.h"
 
-
 &mt {
     tapping-term-ms = <280>;
     flavor = "tap-preferred";
@@ -188,31 +187,11 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2            &bt BT_SEL 3          &bt BT_SEL 4                     &trans        &trans        &trans        &trans        &trans         &kp DE_A_UMLAUT
-&kp F1      &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3            &kp NUMBER_4          &kp NUMBER_5                     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp F12
-&kp GRAVE   &kp EXCL      &hml LEFT_ALT AT  &hml LEFT_CONTROL HASH  &hml LEFT_GUI DOLLAR  &kp PRCNT                        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp BACKSPACE  &kp DELETE
-&trans      &trans        &trans            &trans                  &trans                &trans        &trans    &trans   &trans        &kp MINUS     &kp KP_PLUS   &kp LBRC      &kp BACKSLASH  &kp PIPE
-                                            &trans                  &trans                &trans        &trans    &kp RET  &trans        &trans        &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        raise_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
-
-            display-name = "Raise";
-            bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&trans      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp F6        &kp F7        &kp F8        &kp F9        &kp F10        &trans
+&trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &trans
+&trans      &trans        &trans        &trans        &trans        &trans                          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp BACKSPACE  &kp DELETE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans    &trans  &trans        &trans        &trans        &trans        &kp BACKSLASH  &kp PIPE
+                                        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
